@@ -1,3 +1,6 @@
+from notion.client import notion 
+from notion.trade.net_profit import net_profit
+
 def trade_updator(results):
     for id, raw_prop in results.items():
         properties = {
