@@ -1,5 +1,6 @@
 from notion.client import notion 
 from notion.trade.net_profit import net_profit
+from utils.day_log import today_and_time_is
 
 def trade_updator(results):
     for id, raw_prop in results.items():
