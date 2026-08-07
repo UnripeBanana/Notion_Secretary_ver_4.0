@@ -13,7 +13,6 @@ from notion.trade.updator import trade_updator
 trade_groups = defaultdict(list)
 
 for page in get_all_pages(NOTION_TRADE_DB_ID):
-    print(page["properties"])
     trade = trade_reader(page)  
     trade_groups[trade["ticker"]].append(trade)   
     
