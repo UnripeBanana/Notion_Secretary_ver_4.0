@@ -6,10 +6,8 @@ from notion.trade.fifo import process_fifo
 #-----------------------------------------
 # 국내주식 거래내역 DB 업데이트
 #-----------------------------------------
-from assets.domestic_stock.trade.reader import read_domestic_stock_trade
-from assets.domestic_stock.trade.updater import update_domestic_stock_trade_DB
-
-
+from notion.trade.reader import trade_reader
+from notion.trade.updater import trade_updator
 
 # 각 페이지별로 데이터 읽기
 trade_groups = defaultdict(list)
