@@ -1,4 +1,4 @@
-from config.notion import NOTION_NET_PROFIT_DB_ID
+from notion.config import NOTION_NET_PROFIT_DB_ID
 from notion.client import notion
 from notion.rich_text import rich_text
 from utils.day_log import today_and_time_is
