@@ -5,7 +5,8 @@ def trade_updator(results):
     for id, raw_prop in results.items():
         properties = {
             "잔량": {"number": raw_prop["remaining"]},
-            "실현수익": {"number": raw_prop["profit"]}
+            "실현수익": {"number": raw_prop["profit"]},
+            "마지막 업데이트": 
         }
 
         if raw_prop["profit"] and not raw_prop["profit_saved"]: 
