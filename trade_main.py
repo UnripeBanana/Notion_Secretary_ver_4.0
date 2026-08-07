@@ -1,4 +1,4 @@
-from config.notion import NOTION_TRADE_DB_ID
+from notion.config import NOTION_TRADE_DB_ID
 from notion.get_all_pages import get_all_pages
 from collections import defaultdict
 from notion.trade.fifo import process_fifo
