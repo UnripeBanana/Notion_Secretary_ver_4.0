@@ -14,7 +14,7 @@ trade_groups = defaultdict(list)
 
 for page in get_all_pages(NOTION_TRADE_DB_ID):
     print(page["properties"])
-    trade = read_trade_DB(page)  
+    trade = trade_reader(page)  
     trade_groups[trade["ticker"]].append(trade)   
     
 # 읽은 데이터 fifo처리
@@ -24,4 +24,4 @@ for trades in trade_groups.values():
 trade_results = process_fifo(trade_groups)
 
 # 노션에 데이터 업데이트
-update_trade_DB(trade_results)
+trade_updator(trade_results)
